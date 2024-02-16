@@ -1,0 +1,151 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <Button
+        android:id="@+id/fragAdvClose"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="close"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragAdvTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Additional Options"
+        android:textSize="34sp"
+        app:layout_constraintBottom_toBottomOf="@+id/fragAdvClose"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent" />
+
+    <TextView
+        android:id="@+id/fragAdvIntolTitle"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="18dp"
+        android:text="Intolerances"
+        android:textSize="24sp"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@+id/fragAdvTitle" />
+
+    <CheckBox
+        android:id="@+id/fragAdvGluten"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Gluten"
+        app:layout_constraintEnd_toStartOf="@+id/fragAdvDairy"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="@+id/fragAdvDairy" />
+
+    <CheckBox
+        android:id="@+id/fragAdvDairy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Dairy"
+        app:layout_constraintEnd_toStartOf="@+id/fragAdvWheat"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragAdvGluten"
+        app:layout_constraintTop_toBottomOf="@+id/fragAdvIntolTitle" />
+
+    <CheckBox
+        android:id="@+id/fragAdvWheat"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Wheat"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintHorizontal_bias="0.5"
+        app:layout_constraintStart_toEndOf="@+id/fragAdvDairy"
+        app:layout_constraintTop_toTopOf="@+id/fragAdvDairy" />
+
+    <CheckBox
+        android:id="@+id/fragAdvSeafood"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Seafood"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvWheat"
+        app:layout_constraintTop_toTopOf="@+id/fragAdvGrain" />
+
+    <CheckBox
+        android:id="@+id/fragAdvShellfish"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Shellfish"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvSesame"
+        app:layout_constraintTop_toTopOf="@+id/fragAdvPeanuts" />
+
+    <CheckBox
+        android:id="@+id/fragAdvPeanuts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Peanuts"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvGrain"
+        app:layout_constraintTop_toBottomOf="@+id/fragAdvGrain" />
+
+    <CheckBox
+        android:id="@+id/fragAdvTreenuts"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Tree nuts"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvSeafood"
+        app:layout_constraintTop_toTopOf="@+id/fragAdvPeanuts" />
+
+    <CheckBox
+        android:id="@+id/fragAdvEgg"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Egg"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvShellfish"
+        app:layout_constraintTop_toTopOf="@+id/fragAdvSoy" />
+
+    <CheckBox
+        android:id="@+id/fragAdvSoy"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Soy"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvPeanuts"
+        app:layout_constraintTop_toBottomOf="@+id/fragAdvPeanuts" />
+
+    <CheckBox
+        android:id="@+id/fragAdvSulfite"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sulfite"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvTreenuts"
+        app:layout_constraintTop_toTopOf="@+id/fragAdvSoy" />
+
+    <CheckBox
+        android:id="@+id/fragAdvSesame"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Sesame"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvGluten"
+        app:layout_constraintTop_toTopOf="@+id/fragAdvGrain" />
+
+    <CheckBox
+        android:id="@+id/fragAdvGrain"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="8dp"
+        android:text="Grain"
+        app:layout_constraintStart_toStartOf="@+id/fragAdvDairy"
+        app:layout_constraintTop_toBottomOf="@+id/fragAdvDairy" />
+
+    <Switch
+        android:id="@+id/fragAdvStrict"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="24dp"
+        android:text="Hide recipes with missing ingredients"
+        app:layout_constraintEnd_toEndOf="@+id/fragAdvSulfite"
+        app:layout_constraintTop_toBottomOf="@+id/fragAdvEgg" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

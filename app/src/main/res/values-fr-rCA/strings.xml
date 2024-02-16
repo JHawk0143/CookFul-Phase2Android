@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="app_name">CookFul</string>
+    <string name="action_settings">Paramètres</string>
+    <string name="first_fragment_label">" Page d'accueil"</string>
+    <string name="second_fragment_label">" Deuxième fragment"</string>
+    <string name="third_fragment_label">Troisième fragment</string>
+    <string name="ingredient_fragment_label">" Fragment d'ingrédient"</string>
+    <string name="next">" Prochain"</string>
+    <string name="previous">" Préalable"</string>
+    <string name="hello_first_fragment">" Bonjour premier fragment"</string>
+    <string name="hello_second_fragment">" Bonjour deuxième fragment"</string>
+    <string name="hello_blank_fragment">" Bonjour fragment vierge"</string>
+</resources>

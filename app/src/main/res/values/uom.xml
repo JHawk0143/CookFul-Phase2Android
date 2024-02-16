@@ -1,0 +1,12 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string-array name="uom_array">
+        <item>Cups</item>
+        <item>Ounces</item>
+        <item>Pounds</item>
+        <item>Teaspoon</item>
+        <item>Tablespoon</item>
+        <item>Milliliters</item>
+        <item>Grams</item>
+    </string-array>
+</resources>
