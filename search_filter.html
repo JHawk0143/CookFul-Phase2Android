@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Search</title>
+    <link rel="stylesheet" href="App.css">
+    <link rel="stylesheet" href="search.css">
+    <style>
+        /* Body styles */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f5f5f5;
+    background-image: url('veggies.jpg');
+    margin: 0;
+    padding: 0;
+}
+
+.container {
+    max-width: 800px;
+    margin: 20px auto;
+    padding: 20px;
+    background-color: #fff;
+    border-radius: 8px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+h1 {
+    text-align: center;
+    color: #333;
+}
+
+/* Form styles */
+form {
+    margin-bottom: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+    color: #555;
+}
+
+input[type="text"],
+select {
+    width: 100%;
+    padding: 8px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="range"] {
+    width: 100%;
+    margin-bottom: 10px;
+}
+
+input[type="submit"],
+button {
+    width: 100%;
+    padding: 10px;
+    background-color: #007bff;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover,
+button:hover {
+    background-color: #216ab9;
+}
+
+/* Search container styles */
+.search-container {
+    display: flex;
+    margin-bottom: 20px;
+}
+
+#search {
+    flex: 1;
+    padding: 8px;
+    border: 1px solid #a62323;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+#search-button {
+    padding: 8px 15px;
+    background-color: #27bc2c;
+    border: none;
+    border-radius: 4px;
+    color: #fff;
+    cursor: pointer;
+}
+
+#search-button:hover {
+    background-color: #1eac25;
+}
+
+/* Results styles */
+.results {
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding: 10px;
+}
+
+    </style>
+</head>
+<body>
+    <div class="container">
+        <h1>Search Recipes</h1>
+
+        <!-- Filter Form -->
+        <form action="#" method="get">
+            <label for="dietary-restrictions">Dietary Restrictions:</label>
+            <select name="dietary-restrictions" id="dietary-restrictions">
+                <option value="all">All</option>
+                <option value="vegan">Vegan</option>
+                <option value="vegetarian">Vegetarian</option>
+                <option value="gluten-free">Gluten-Free</option>
+                <option value="dairy-free">Dairy-Free</option>
+            </select>
+
+            <label for="cooking-time">Cooking Time:</label>
+            <input type="range" name="cooking-time" id="cooking-time" min="0" max="120" step="5">
+
+            <label for="difficulty">Difficulty:</label>
+            <select name="difficulty" id="difficulty">
+                <option value="easy">Easy</option>
+                <option value="medium">Medium</option>
+                <option value="hard">Hard</option>
+            </select>
+
+            <input type="submit" value="Apply Filters">
+        </form>
+
+        <div class="search-container">
+            <form id="search-form">
+                <input type="text" id="search" placeholder="Search..." oninput="filterResults(this.value)">
+                <button type="button" id="search-button">Search</button>
+            </form>
+        </div>
+        <div id="results" class="results"></div>
+    </div>
+    <script src="launch.json"></script>
+    <script>
+        // Add any custom JavaScript code here
+    </script>
+</body>
+</html>

@@ -1,0 +1,46 @@
+form {
+    margin-top: 20px;
+}
+
+label {
+    display: block;
+    margin-bottom: 5px;
+}
+
+input[type="text"],
+input[type="password"],
+input[type="submit"] {
+    width: 100%;
+    padding: 10px;
+    margin-bottom: 10px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    box-sizing: border-box;
+}
+
+input[type="submit"] {
+    background-color: #4CAF50;
+    color: white;
+    border: none;
+    cursor: pointer;
+}
+
+input[type="submit"]:hover {
+    background-color: #45a049;
+}
+
+.error-message {
+    color: red;
+    font-size: smaller; 
+}
+
+.sign-in-text a {
+    color: #007bff;
+    text-decoration: none;
+}
+
+.sign-in-text a:hover {
+    text-decoration: underline; 
+}
+
+

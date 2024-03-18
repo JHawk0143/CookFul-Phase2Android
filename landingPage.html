@@ -1,0 +1,79 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Cookful</title>
+    <style>
+        body {
+            margin: 0;
+            padding: 0;
+        }
+
+        .header {
+            background-color: #333;
+            background-image: url('landingPage.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 100vh;
+            color: #fff;
+            padding: 10px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+            position: relative; /* Added position relative */
+        }
+
+        .header a {
+            color: black; /* Change the color to black */
+            text-decoration: none;
+            font-size: large;
+            margin-right: 10px;
+            font-weight: bold;
+            margin-bottom: auto;
+            /* Remove absolute positioning */
+            /* position: absolute;
+            top: 10px; */
+            display: inline-block; /* Arrange horizontally */
+        }
+
+        .header a:hover {
+            color: #32ba20;
+        }
+
+        .content {
+            padding: 20px;
+            position: absolute; /* Added position absolute */
+            top: 50%; /* Centering vertically */
+            left: 50%; /* Centering horizontally */
+            transform: translate(-50%, -50%); /* Centering trick */
+            text-align: center;
+            z-index: 1; /* Added z-index */
+        }
+
+        .button {
+            background-color: #4CAF50;
+            color: white;
+            padding: 15px 32px;
+            text-align: center;
+            text-decoration: none;
+            display: inline-block;
+            font-size: 16px;
+            margin: 4px 2px;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+<div class="header">
+    <a href="login.html">Login</a>
+    <a href="signup.html">Sign In</a>
+    <a href="#">Recipe</a>
+    <a href="#">About Us</a>
+    <a href="#">Contact</a>
+</div>
+<div class="content">
+    <h1>Welcome to Cookful!</h1>
+    <p>Discover delicious recipes and cooking tips to make your meals more enjoyable.</p>
+    <a class="button" href="signup.html">Get Started</a>
+</div>
+</body>
+</html>

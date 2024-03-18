@@ -1,0 +1,81 @@
+body {
+    font-family: Arial, sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f4f4f4;
+}
+
+.signup-form {
+    background: #fff;
+    padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.signup-form h2 {
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+.signup-form input {
+    width: 100%;
+    padding: 10px;
+    margin: 10px 0;
+    border-radius: 5px;
+    border: 1px solid #ddd;
+}
+
+.signup-form button {
+    width: 100%;
+    padding: 10px;
+    border: none;
+    border-radius: 5px;
+    background-color: var(--primary-color); /* Using variable from App.css */
+    color: white;
+    cursor: pointer;
+}
+
+.signup-form button:hover {
+    background-color: darkblue;
+}
+
+.sign-in-text {
+    text-align: center;
+    margin-top: 20px;
+}
+
+.sign-in-text a {
+    color: var(--primary-color); /* Using variable from App.css */
+    text-decoration: none;
+}
+
+.sign-in-text a:hover {
+    text-decoration: underline;
+}
+
+.error-message {
+    color: red;
+    font-size: 0.8em;
+    height: 20px;
+    margin-bottom: 10px;
+    display: none; /* Hide by default */
+}
+
+.password-toggle {
+    cursor: pointer;
+    display: flex;
+    align-items: center;
+    font-size: 0.8em;
+    margin-top: 5px;
+}
+
+.password-toggle-icon {
+    margin-right: 5px;
+}
+
+.password-toggle-text {
+    color: #000;
+    text-decoration: underline;
+}

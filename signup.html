@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Sign Up Page</title>
+    <link rel="stylesheet" href="App2.css">
+    <link rel="stylesheet" href="signup.css">
+</head>
+
+<body>
+    <div class="signup-form">
+        <h2>Sign Up</h2>
+        <form id="form" action="signup.php" method="POST">
+            <input type="text" id="user_name" name="user_name" placeholder="Username">
+            <span id="username-error" class="error-message"></span>
+
+            <input type="email" id="email" name="email" placeholder="Email">
+            <span id="email-error" class="error-message"></span>
+
+            <input type="password" id="password" name="password" placeholder="Password" >
+            <span id="password-error" class="error-message"></span>
+            <div class="password-toggle" onclick="togglePasswordVisibility('password', 'password-toggle-icon', 'password-toggle-text')">
+                <span id="password-toggle-icon">👁</span> <span id="password-toggle-text" class="password-toggle-text">See Password</span>
+            </div>
+
+            <input type="password" id="confirm-password" name= "confirm_password" placeholder="Confirm Password" >
+            <span id="confirm-password-error" class="error-message"></span>
+            <div class="password-toggle" onclick="togglePasswordVisibility('confirm-password', 'confirm-password-toggle-icon', 'confirm-password-toggle-text')">
+                <span id="confirm-password-toggle-icon">👁</span> <span id="confirm-password-toggle-text" class="password-toggle-text">See Password</span>
+            </div>
+
+            <button type="submit">Sign Up</button>
+            <p class="sign-in-text">
+                Already have an account? <a href="login.html">Sign in</a>
+            </p>
+        </form>
+    </div>
+    <script src="signup.js"></script>
+</body>
+
+</html>

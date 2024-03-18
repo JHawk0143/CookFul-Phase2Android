@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Login</title>
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.4/css/all.min.css">
+<link rel="stylesheet" href="App.css">
+<link rel="stylesheet" type="text/css" href="login.css">
+
+<style>
+    body {
+        margin: 0;
+        padding: 0;
+        background-image: url('Login_background_image.jpg');
+        background-size: cover;
+        background-position: center;
+        height: 100vh;
+        overflow: hidden;
+        opacity: 20;
+        filter: brightness(70%); /* Adjust the brightness level as needed (e.g., 70%) */
+    }
+    </style>
+
+</head>
+
+<body>
+<div class="login-box-container">
+    <div class="container">
+        <h2>Login to your Account</h2>
+        <form id="loginForm" action="loginvalidation.php" method="post">
+            <label for="username">Username</label>
+            <input type="text" id="user_name" name="user_name" placeholder="Enter your username">
+            <p id="usernameError" class="error-message"></p> <!-- Error message container for username -->
+            <label for="password">Password</label>
+            <div class="password-input-container">
+                <input type="password" id="password" name="password" placeholder="Enter your password">
+                <i id="togglePasswordIcon" class="fas fa-eye-slash"></i> <!-- Eye icon for toggling password visibility when clicked -->
+                <span id="togglePasswordText">Show Password</span> <!-- Text indicating password confidentiality -->
+            </div>
+            <p id="passwordError" class="error-message"></p> <!-- Error message container for password -->
+            <p id="loginError" class="error-message"></p> <!-- Error message container for login -->
+            <input type="submit" value="Sign In">
+            <p class="sign-in-text">
+                Don't have an account? <a href="signup.html">Sign up!</a>
+            </p>
+        </form>
+    </div>
+</div>
+
+<script src="login.js"></script>
+
+</body>
+</html>
