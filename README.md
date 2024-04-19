@@ -3,10 +3,10 @@
 Appy.Yo
 
 ## Authors
-Julianna Hawkins
-Wissam Kaadou
-Aryan Sehgal
-Lele Xiong
+Julianna Hawkins,
+Wissam Kaadou,
+Aryan Sehgal,
+Lele Xiong,
 Nicholas Zhang
 
 ## Description
