@@ -6,15 +6,39 @@
     <title>Search</title>
     <link rel="stylesheet" href="App.css">
     <link rel="stylesheet" href="search.css">
+    <script src="search.js" defer></script>
 </head>
 <body>
+    <div class="top-bar">
+        <div class="diet-option">
+            <label>Diet Preferences:</label>
+                <label>
+                    <input type="checkbox" id="vegan" class="diet-option">
+                    Vegan
+                </label>
+                <label>
+                    <input type="checkbox" id="vegetarian" class="diet-option">
+                    Vegetarian
+                </label>
+                <label>
+                    <input type="checkbox" id="glutenfree" class="diet-option">
+                    Gluten Free
+                </label>
+                <!-- Add more diet options if needed -->
+            </div>
+            <div class="pantry-option">
+                <button onclick="window.location.href='pantry.html'">My Pantry</button>
+            </div>
+        
+        
+    </div>
+
     <div class="search-container">
-        <form id="search-form">
-            <input type="text" id="search" placeholder="Search..." oninput="filterResults(this.value)">
-            <button type="button" id="search-button">Search</button>
+        <form id="searchForm">
+            <input type="text" id="query" placeholder="Search...">
+            <button type="submit" id="search-button">Search</button>
         </form>
     </div>
     <div id="results" class="results"></div>
-    <script src="launch.json"></script>
 </body>
 </html>
