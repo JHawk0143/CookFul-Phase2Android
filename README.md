@@ -1,59 +1,39 @@
-This is the final build of the Cooking Chef app; this document will give an overview of the code structure,
-how to run the code, current issues, idiosyncrasies, and thoughts on future development.
+# CST8334 Software Development Project
+## Client
+Appy.Yo
 
-    Build instructions:
-        This repository can be directly imported into Android Studio and run with little to no setup.
-        There is also a .apk file which is a snapshot of the app, and can be loaded into an android phone
+## Authors
+Julianna Hawkins
+Wissam Kaadou
+Aryan Sehgal
+Lele Xiong
+Nicholas Zhang
 
-    Code structure:
+## Description
+This project is an implementation of the Cookful app which is a web application that uses the Spoonacular API to be able to search for recipes as well as to keep track of ingredients that you may need to purchase for the recipes. You will require to sign up and login to your account to search for recipes as well as to add to an ingredient list. The goal with this Cookful app is to reduce food waste so it allows people to input certain ingredients that are about to go bad or they just need to use for other reasons to find recipes that use the ingredients. The ultimate aim is to reducing food waste.
 
-        The app consists of one activity, and multiple fragments which represent the different "pages" of the app.
-        This home activity holds the buttons used to navigate around the app.
-    
-        Packages:
-            The code is divided into packages depending on what aspect of the app they handle.
-            
-            Activities: This package is for app activities; there's only one, the home activity.
-            API: All code used to interact with and manage data from the API is in this package. 
-                -"ApiConnection" handles connecting and requests. 
-                -"ApiBitmapHolder" manages and saves image responses. 
-                -"ApiJSONArrayHolder" manages and saves any list provided by the API
-                -"ApiJSONObjectHolder" manages and saves any single object provided by the API
+## Prerequisites
+- An application to develop and modify text files like an IDE as an example
 
-            Database: All code that creates and interacts with the app database
-                -"daos" all Data Access Objects, which are the interactions with specific database tables.
-                -"models" setup the structure of database tables
-                -"AppDatabase" main database class, which lists which daos the database implements
-                -"DbHolder" holds the reference to the database, which can be accessed by all fragments.
+## Setting up the local environment
+- XAMPP localhost database. If using a different database, the signup and login files will likely need an update to an according database connection. Version 3.3.0 of the XAMPP Control Panel using up to date version of MySQL and Apache. Could use more recent version of XAMPP Control Panel as well.
+- Spoonacular Account to switch the API key in the needed files as the key used in the code currently use a different key.
+  
+## Running the application
+- Once the spoonacular api key is changed, it can be used to search for recipes and do other requests related with the API.
+- The XAMPP Control Panel MySQL database was mainly used as a method for the demonstrations for account logging. If using XAMPP, you may need to adjust the appropriate variables relating to connection.php file to the appropriate parts in database configuration.
 
-            Fragments:
-                - Home fragment: holds recently viewed recipes and is the first fragment shown
-                - Favorites fragment: shows recipes flagged as favorites
-                - Ingredient fragment: also referred to as pantry, interacts with the database ingredient table and is used to select ingredients to search for.
-                - Search fragment: sends requests to the API and displays search results
-                - Search fragment dialog: Allows viewing and interacting with a recipe selected from any view
-                - Search options fragment: holds all search modification options.
+## Known Issues 
+- The signup currently allows the same email to register more than once. If this is an intended feature for the app, no issues.
 
-            Recyclerviews: All "lists" seen in the fragments are recyclerviews, which are just efficient list containers. Each fragment with a list has it's own recycler view
-                -"*RowData" defines what data each row can hold
-                -"*RowController" functions to interact with the recycler view
-                -"*Recycler" is the adapter/view, which handles initial startup of the view and sets row data.
+- The login currently only runs the Javascript properly but not the php to check if the users are actually registered. Currently lets everyone through to the app if it passes the Javascript functions.
 
-    Current issues:
-        - The key used to access the API is the "free" tier, which limits the daily use of the app.
-            -This key is currently hard coded into the app, and before releasing as a product that must change.
-        - Selecting favorites currently works when the recipe dialog is opened from the home fragment.
-        - Returned API results are limited and not paginated
-        - Not all database functionality is implemented.
-        - Implementing units of measurement and pantry inventory levels is not implemented, but the hooks to do so exist.
-        - Some layouts need additional formatting
-        - Currently no support for tablets
-        - No strings translation files
-        
-    Future development:
-        - The API key should be retrieved from an external server, which the app would use to make requests.
-            - Anonymous users should be limited, as requests costs money. Registered users can be free.
-            - Registering users would require an external server; same one where the API key lives.
-        - Data model for the database should be refactored.
-        - Supporting tablets is a case of creating new layouts and some code in the fragments. 
-        - The next phase of app development should focus on the infrastucture that supports the app, like authentication and user data.
+- The signup AND login backend codes (javascript and php) likely may only work on the system of the user that wrote it. UPDATE accordingly.
+
+- The search bar currently does not properly use any of the diet restrictions as part of the search for recipes.
+
+- The search bar currently searches for recipes but does not contain a method to list the recipes with the most amount of ingredients in the listed search bar. (ex. "carrot, broccoli" shows recipes with only carrots instead of the ones with both first.)
+
+- The pantry allows user to search for ingredients in the search bar, but no implementation to add to the pantry or picture of ingredient(s)
+
+- There is no implementation of favouriting recipes.
