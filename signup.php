@@ -3,6 +3,7 @@ session_start();
 include("connection.php");
 include("functions.php");
 
+
 // Check if the request is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
     $user_name = $_POST['user_name'];

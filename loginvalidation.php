@@ -2,7 +2,9 @@
 session_start();
 include("connection.php");
 include("functions.php");
-header("Location: search.html"); // Redirects to search page of application
+
+// Redirect to the search page
+header("Location: search.html");
 exit;
 // Check if the request is POST
 if ($_SERVER["REQUEST_METHOD"] == "POST") {
@@ -24,13 +26,14 @@ if ($_SERVER["REQUEST_METHOD"] == "POST") {
             // Fetch user data
             $user_data = $result->fetch_assoc();
 
-            // Verifies the password with the users database
+            // Verify the password with the hashed password stored in the database
             if (password_verify($password, $user_data['password'])) {
                 // if password is correct, set session variables and redirect
                 $_SESSION['user_id'] = $user_data['user_id'];
                 $_SESSION['user_name'] = $user_data['user_name'];
-            } else {
 
+            } else {
+                // Incorrect password
                 echo "Incorrect password.";
             }
         } else {
