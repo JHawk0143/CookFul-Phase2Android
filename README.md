@@ -28,7 +28,7 @@ This project is an implementation of the Cookful app which is a web application 
 
 - The login currently only runs the Javascript properly but not the php to check if the users are actually registered. Currently lets everyone through to the app if it passes the Javascript functions.
 
-- The signup AND login backend codes (javascript and php) likely may only work on the system of the user that wrote it. UPDATE accordingly.
+- The signup AND login backend codes (javascript and php) likely may only work on the system of the user that wrote it. UPDATE accordingly in connections.php.
 
 - The search bar currently does not properly use any of the diet restrictions as part of the search for recipes.
 
